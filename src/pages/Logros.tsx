@@ -45,7 +45,7 @@ const achievements: Achievement[] = [
     description: 'Finalicé mi primer semestre de mi Ingenieria en Inteligencia Artificial donde obtube el reconocimiento como mejor alumno, graduándome con honores.',
     icon: <FaGraduationCap />,
     neonColor: '#a0f', // Púrpura
-    date: 'Diciembre 2022',
+    date: 'Diciembre 2024',
   },
 ];
 
