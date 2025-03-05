@@ -26,7 +26,7 @@ const projects: Project[] = [
     description: 'Mi propio portafolio web, diseñado con un tema oscuro y efectos neón. Muestra mis proyectos, habilidades y logros de manera interactiva.',
     image: '/web2.png', // Reemplaza con la ruta a tu imagen
     technologies: ['React', 'TailwindCSS', 'TypeScript'],
-    liveLink: 'https://bienesraicesisrael.netlify.app/',
+    liveLink: 'https://portafoliobaruc.netlify.app',
     githubLink: 'https://github.com/tuusuario/portfolio',
   },
   {
