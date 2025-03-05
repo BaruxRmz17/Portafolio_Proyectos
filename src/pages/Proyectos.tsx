@@ -47,11 +47,19 @@ const projects: Project[] = [
   },
   {
     title: 'Ococalli Logistica',
-    description: 'Este fue una pagina donde el dueño de Ococalli puede tener una mejor logistica de esta manera ayuda a eficientar sus tiempos y un mayor registro de sus ventas y clientes.',
+    description: 'Esta fue una pagina donde el dueño de Ococalli puede tener una mejor logistica de esta manera ayuda a eficientar sus tiempos y un mayor registro de sus ventas y clientes.',
     image: '/web5.png', // Reemplaza con la ruta a tu imagen
     technologies: ['TypeScript', 'React', 'Supabase', 'TailwindCSS'],
     liveLink: 'https://ococallilogistica.netlify.app/',
     githubLink: 'https://github.com/yosoyemi/ococalli-logistica.git',
+
+  },
+  {
+    title: 'PastList',
+    description: 'Es una Aplicacion movil realizada en Flutter con la finalidad de que a los alumnos y profesores les sea mas facil el pasar lista a los alumnos.',
+    image: '/web5.png', // Reemplaza con la ruta a tu imagen
+    technologies: ['Flutter', 'Dart', 'Firebase'],
+    githubLink: 'https://github.com/AndreyyMunoz/Pass_List_168.git',
 
   },
 ];

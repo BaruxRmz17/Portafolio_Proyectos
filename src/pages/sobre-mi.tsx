@@ -47,7 +47,7 @@ function About() {
             {/* Botón de descargar CV */}
             <div className="mt-8">
               <a
-                href="/path/to/your/cv.pdf" // Reemplaza con la ruta a tu CV
+                href="Curriculum_BARUC.pdf" // Reemplaza con la ruta a tu CV
                 download
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 hover:shadow-[0_0_15px_#00f] transition-all duration-300"
               >
