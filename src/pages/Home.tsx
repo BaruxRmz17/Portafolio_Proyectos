@@ -31,7 +31,7 @@ function Home() {
           <a href="/Proyectos" className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">
             Ver Proyectos
           </a>
-          <a href="/" className="border-2 border-purple-500 text-purple-500 px-6 py-3 rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
+          <a href="/sobre-mi" className="border-2 border-purple-500 text-purple-500 px-6 py-3 rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
             Sobre mí
           </a>
         </div>
