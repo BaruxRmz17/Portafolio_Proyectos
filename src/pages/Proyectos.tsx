@@ -17,7 +17,7 @@ const projects: Project[] = [
     title: 'Aplicación de Bienes Raices',
     description: 'Una pagina web la cual ayua a gestionar la venta de casas y terrenos, ademas ayuda a la comunicacion entre usuarios y el vendedor y con la oportunidad de poder dejar comentarios.',
     image: '/web1.png', // Reemplaza con la ruta a tu imagen
-    technologies: ['React', 'TypeScript', 'Supabase'],
+    technologies: ['React', 'TypeScript', 'Supabase', 'TailwindCSS'],
     githubLink: 'https://github.com/BaruxRmz17/web_bienes_raices_I.git',
     liveLink: 'https://bienesraicesisrael.netlify.app/',
   },
