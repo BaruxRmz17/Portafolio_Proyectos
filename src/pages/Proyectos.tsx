@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     title: 'PastList',
     description: 'Es una Aplicacion movil realizada en Flutter con la finalidad de que a los alumnos y profesores les sea mas facil el pasar lista a los alumnos.',
-    image: '/web5.png', // Reemplaza con la ruta a tu imagen
+    image: '/web6.png', // Reemplaza con la ruta a tu imagen
     technologies: ['Flutter', 'Dart', 'Firebase'],
     githubLink: 'https://github.com/AndreyyMunoz/Pass_List_168.git',
 
