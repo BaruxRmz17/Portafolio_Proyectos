@@ -25,7 +25,7 @@ function Footer() {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/tuusuario"
+              href="www.linkedin.com/in/barux-undefined-20744634b"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 hover:shadow-[0_0_10px_#00f] transition-all duration-300"
