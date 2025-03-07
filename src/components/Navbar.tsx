@@ -1,39 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isOpen) return; // No hacer nada si el menú está abierto
-
-      if (window.scrollY > lastScrollY && window.innerWidth <= 768) {
-        setIsVisible(false); // Oculta el navbar solo en móviles si hace scroll hacia abajo
-      } else {
-        setIsVisible(true); // Muestra el navbar si hace scroll hacia arriba
-      }
-
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isOpen]);
+  // Función para navegar y desplazar al inicio con animación
+  const handleNavigation = (path: string) => {
+    navigate(path); // Navega a la ruta
+    // Usamos un pequeño retraso para asegurar que la navegación ocurra primero
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave
+    }, 100); // Retraso de 100ms para que la nueva página cargue
+    setIsOpen(false); // Cierra el menú móvil si está abierto
+  };
 
   return (
-    <header
-      className={`bg-gray-900 text-white fixed w-full top-0 z-20 shadow-lg transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
+    <header className="bg-gray-900 text-white fixed w-full top-0 z-20 shadow-lg">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <a href="/" className="text-2xl md:text-3xl font-bold tracking-tight">
+        <a
+          href="/"
+          className="text-2xl md:text-3xl font-bold tracking-tight"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavigation('/');
+          }}
+        >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
             Baruc Ramirez
           </span>
@@ -49,8 +44,12 @@ function Navbar() {
           {['Inicio', 'Sobre Mi', 'Proyectos', 'Habilidades', 'Logros'].map((item) => (
             <Link
               key={item}
-              to={item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} // Ruta para cada componente
+              to={item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
               className="text-gray-300 hover:text-blue-400 hover:shadow-[0_0_10px_#00f] transition-all duration-300 px-3 py-1 rounded"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation(item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`);
+              }}
             >
               {item}
             </Link>
@@ -66,11 +65,11 @@ function Navbar() {
           {['Inicio', 'Sobre Mi', 'Proyectos', 'Habilidades', 'Logros'].map((item) => (
             <Link
               key={item}
-              to={item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} // Ruta para cada componente
+              to={item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
               className="text-gray-300 hover:text-blue-400 hover:shadow-[0_0_10px_#00f] transition-all duration-300 py-2 w-full text-center"
-              onClick={() => {
-                toggleMenu();
-                setIsVisible(true); // Asegurar que el navbar se mantenga visible después de cerrar el menú
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation(item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`);
               }}
             >
               {item}
