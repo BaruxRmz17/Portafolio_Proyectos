@@ -6,6 +6,8 @@ import SobreMi from './pages/sobre-mi';
 import Projects from './pages/Proyectos';
 import Skills from './pages/Habilidades';
 import Achievements from './pages/Logros';
+import AboutRamirezTech from './pages/ramirez-tech';
+
 import Footer from './components/footer';  // Asegúrate de importar el Footer
 
 const App: React.FC = () => {
@@ -25,6 +27,9 @@ const App: React.FC = () => {
           <Route path="/Proyectos" element={<Projects />} />
           <Route path="/Habilidades" element={<Skills />} />
           <Route path="/Logros" element={<Achievements />} />
+          <Route path="/ramirez-tech" element={<AboutRamirezTech />} />
+
+          
         </Routes>
       </div>
 
