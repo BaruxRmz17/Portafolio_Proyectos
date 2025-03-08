@@ -17,7 +17,7 @@ function Navbar() {
     setIsOpen(false); // Cierra el menú móvil si está abierto
   };
 
-  // Lista de opciones del menú, incluyendo "RamT"
+  // Lista de opciones del menú, incluyendo "Ramirez Tech"
   const menuItems = ['Inicio', 'Sobre Mi', 'Proyectos', 'Habilidades', 'Logros', 'Ramirez Tech'];
 
   return (
@@ -50,7 +50,9 @@ function Navbar() {
               className="text-gray-300 hover:text-blue-400 hover:shadow-[0_0_10px_#00f] transition-all duration-300 px-3 py-1 rounded"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavigation(item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`);
+                handleNavigation(
+                  item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`
+                );
               }}
             >
               {item}
@@ -71,7 +73,9 @@ function Navbar() {
               className="text-gray-300 hover:text-blue-400 hover:shadow-[0_0_10px_#00f] transition-all duration-300 py-2 w-full text-center"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavigation(item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`);
+                handleNavigation(
+                  item === 'Inicio' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`
+                );
               }}
             >
               {item}
