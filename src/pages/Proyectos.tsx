@@ -67,8 +67,9 @@ const projects: Project[] = [
     description: 'Es una pagina web la cual ayuda a eficientar los tiempos de los alumnos y hacer mas faciles los pedidos ya que se ahorran filas y les hes mas rapido.',
     image: '/web7.png', // Reemplaza con la ruta a tu imagen
     technologies: ['TypeScript', 'React', 'Supabase', 'TailwindCSS'],
-    githubLink: 'https://github.com/BaruxRmz17/cafe_tec',
     liveLink: 'https://cafetecpabe.netlify.app/',
+    githubLink: 'https://github.com/BaruxRmz17/cafe_tec',
+
 
 
   },
